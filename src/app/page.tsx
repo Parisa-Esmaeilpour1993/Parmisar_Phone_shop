@@ -1,6 +1,11 @@
+import Footer from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 
 export default function Home() {
-  return <div className="">
-    <p className="bg-red-500">hello</p>
-  </div>;
+  return (
+    <div>
+      <Header />
+      <Footer />
+    </div>
+  );
 }
