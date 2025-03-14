@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className=" flex flex-col md:flex-row items-center justify-between p-6 mx-40">
+    <div className=" flex flex-col md:flex-row items-center justify-between px-6 pt-6 mx-40">
       <div className="text-center md:text-right px-8">
         <h1 className="text-3xl font-extrabold text-gray-800">
           {heroLocalization.bestPhones}
