@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+<<<<<<< HEAD
 @font-face {
   font-family: vazir;
   src: url(./../../public/fonts/Vazir.woff2)
@@ -25,4 +26,8 @@
 
 .number {
     font-family: 'number';
+=======
+.bg-image {
+  background-image: url("../assets/images/online-shopping.jpg");
+>>>>>>> 83ab285e50892ad05ddcf6eb0d72f3e16529740d
 }
