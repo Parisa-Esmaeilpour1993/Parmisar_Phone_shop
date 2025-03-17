@@ -1,18 +1,17 @@
-<<<<<<< HEAD
-export const productslocalization ={
-    products : "صفحه محصولات",
-    all : "همه",
-    apple:"اپل",
-    samsung:"سامسونگ",
-    xiaomi:"شیائومی",
-    huawei:"هواوی",
-    nokia:"نوکیا",
-    nothingPhone:"ناثینگ فون",
-    google:"گوگل",
-    microsoft:"مایکروسافت",
-    price:"تومان"
-}
-=======
+export const productslocalization = {
+  products: "صفحه محصولات",
+  all: "همه",
+  apple: "اپل",
+  samsung: "سامسونگ",
+  xiaomi: "شیائومی",
+  huawei: "هواوی",
+  nokia: "نوکیا",
+  nothingPhone: "ناثینگ فون",
+  google: "گوگل پیکسل",
+  microsoft: "مایکروسافت",
+  price: "تومان",
+};
+
 export const headerLocalization = {
   parmisar: "پارمیسار",
   searchPlaceholder: "جستجو محصول...",
@@ -115,4 +114,3 @@ export const termsLocalization = {
   p2: " ۲. پروفایل عمومی ایجاد شده، تنها با غیر فعال کردن حساب کاربری، غیر فعال خواهد شد.",
   p3: "۳. پارمیسار مسئولیتی در خصوص فعالیت های غیر مجاز (مطالب و نظرات سیاسی، قومیت گرا، تفرقه آمیز، اطلاعات محرمانه دیگران، مطالب غیراخلاقی و غیر قانونی) نداشته و در صورت انجام تخلف، اطلاعات فرد با حکم قضایی تحویل نهادهای قانونی می شود.",
 };
->>>>>>> 83ab285e50892ad05ddcf6eb0d72f3e16529740d

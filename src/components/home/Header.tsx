@@ -8,6 +8,7 @@ import { RiSearch2Line } from "react-icons/ri";
 import Navbar from "./Navbar";
 import { ProductsProps } from "@/interfaces/interfaces";
 import { useRouter } from "next/navigation";
+import { API_KEY, BASE_URL } from "@/services/Api";
 
 export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -25,20 +26,22 @@ export default function Header() {
   }, [searchOpen]);
 
   useEffect(() => {
-    fetch("http://api.alikooshesh.ir:3000/api/records/test", {
+    fetch(`${BASE_URL}/api/records/products`, {
       headers: {
-        api_key:
-          "Esmarilpour-1249kcE0jAUPcW7MtxGCm7h8aTSR90vz1sHsS1n4EPEQSv7c9y9WXzPQJj8zFIjfaguE9eNrzKFvHVPBGXMXnszpC8RdgSnArWSfwQ9Pnzmrc9VbEYID",
+        api_key: API_KEY,
       },
     })
       .then((res) => res.json())
-      .then((data) => setProducts(data.records));
+      .then((data) => {
+        console.log(data);
+        setProducts(data.records);
+      });
   }, []);
 
   useEffect(() => {
     if (searchQuery) {
       const filtered = products.filter((product) =>
-        product.productName.toLowerCase().includes(searchQuery.toLowerCase())
+        product.productName?.toLowerCase().includes(searchQuery.toLowerCase())
       );
       setFilteredProducts(filtered);
     } else {

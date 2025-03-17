@@ -35,7 +35,10 @@ export default function FeaturedProducts() {
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="font-semibold text-center mb-2">
+                <h3
+                  className="font-semibold text-center mb-2"
+                  style={{ direction: "rtl" }}
+                >
                   {review.title}
                 </h3>
                 <p className="text-gray-600  text-sm text-center mb-2">
