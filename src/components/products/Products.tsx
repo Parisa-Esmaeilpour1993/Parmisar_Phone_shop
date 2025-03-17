@@ -1,4 +1,5 @@
 'use client'
+
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FaApple, FaGoogle } from 'react-icons/fa';
 import { IoLogoMicrosoft } from 'react-icons/io5';
@@ -14,17 +15,17 @@ export default function Products() {
   const currentFilter = searchParams.get('brand') || 'all';
 
   const setFilter = (brand: string) => {
-    router.push(`?brand=${brand}`, { scroll: false }); // تغییر پارامتر بدون لود مجدد
+    router.push(`?brand=${brand}`, { scroll: false }); 
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-3 mt-4">
+    <div className="flex flex-col justify-center items-center gap-3 my-6">
       <h1 className="font-bold mb-5 text-2xl">
-        {productslocalization['products']}
+        {productslocalization["products"]}
       </h1>
-      <div className="flex justify-center flex-row items-center gap-16 font-semibold">
+      <div className="flex justify-center flex-row items-center gap-16 font-semibold ">
         <button
-          onClick={() => setFilter('all')}
+          onClick={() => setFilter("all")}
           className={`flex justify-center items-center gap-0.5 cursor-pointer p-1 ${
             currentFilter === 'all' ? 'border-b-2 border-black' : ''
           }`}

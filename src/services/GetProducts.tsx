@@ -1,13 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import axios from 'axios';
-import ProductCard, {
-  IProductCard,
-} from '@/components/products/productCard/productCard';
 import Loading from '@/components/Loading/Loading';
 import { API_KEY, BASE_URL } from './Api';
+import ProductCard, {
+  IProductCard,
+} from "@/components/products/productCard/productCard";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 
 const GetProducts = () => {
   const [products, setProducts] = useState<IProductCard[]>([]);
@@ -16,9 +17,9 @@ const GetProducts = () => {
   const searchParams = useSearchParams();
   const filter = searchParams.get('brand') || 'all'; // مقدار پارامتر از URL
   const filteredProducts =
-    filter === 'all'
+    filter === "all"
       ? products
-      : products.filter(p => p.productType === filter);
+      : products.filter((p) => p.productType === filter);
 
   const getProducts = async () => {
     setLoading(true);
@@ -27,14 +28,16 @@ const GetProducts = () => {
         headers: { api_key: API_KEY },
       });
 
+      console.log("API Response:", response.data);
+
       if (response.data?.records && Array.isArray(response.data.records)) {
         setProducts(response.data.records);
       } else {
-        console.error('Unexpected API response format:', response.data);
+        console.error("Unexpected API response format:", response.data);
         setProducts([]);
       }
     } catch (error) {
-      console.error('Error fetching products:', error);
+      console.error("Error fetching products:", error);
       setProducts([]);
     } finally {
       setLoading(false);
@@ -50,7 +53,9 @@ const GetProducts = () => {
       {loading ? (
         <Loading />
       ) : filteredProducts.length > 0 ? (
-        filteredProducts.map(item => <ProductCard key={item.id} data={item} />)
+        filteredProducts.map((item) => (
+          <ProductCard key={item.id} data={item} />
+        ))
       ) : (
         <p>محصولی یافت نشد</p>
       )}

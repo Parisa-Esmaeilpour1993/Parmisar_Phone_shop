@@ -28,5 +28,5 @@
 }
 
 .bg-image {
-  background-image: url('../assets/images/online-shopping.jpg');
+  background-image: url("../assets/images/online-shopping.jpg");
 }
