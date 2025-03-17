@@ -1,16 +1,20 @@
 'use client';
+
+import { useEffect, useState } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
+import axios from 'axios';
 import ProductCard, {
   IProductCard,
 } from '@/components/products/productCard/productCard';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { API_KEY, BASE_URL } from './Api';
 import Loading from '@/components/Loading/Loading';
+import { API_KEY, BASE_URL } from './Api';
 
-const GetProducts = ({ filter }: { filter: string }) => {
+const GetProducts = () => {
   const [products, setProducts] = useState<IProductCard[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const searchParams = useSearchParams();
+  const filter = searchParams.get('brand') || 'all'; // مقدار پارامتر از URL
   const filteredProducts =
     filter === 'all'
       ? products
@@ -20,12 +24,8 @@ const GetProducts = ({ filter }: { filter: string }) => {
     setLoading(true);
     try {
       const response = await axios.get(`${BASE_URL}/api/records/products`, {
-        headers: {
-          api_key: API_KEY,
-        },
+        headers: { api_key: API_KEY },
       });
-
-      console.log('API Response:', response.data);
 
       if (response.data?.records && Array.isArray(response.data.records)) {
         setProducts(response.data.records);
@@ -43,7 +43,7 @@ const GetProducts = ({ filter }: { filter: string }) => {
 
   useEffect(() => {
     getProducts();
-  }, []); 
+  }, []);
 
   return (
     <div className="grid grid-cols-5 gap-10 mt-8">

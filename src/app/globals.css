@@ -1,9 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-<<<<<<< HEAD
 @font-face {
   font-family: vazir;
-  src: url(./../../public/fonts/Vazir.woff2)
+  src: url(./../../public/fonts/Vazir.woff2);
 }
 
 @font-face {
@@ -17,17 +16,17 @@
 }
 
 .vazir {
-    font-family: 'vazir';
+  font-family: 'vazir';
 }
 
 .vazir-thin {
-    font-family: 'vazir-thin';
+  font-family: 'vazir-thin';
 }
 
 .number {
-    font-family: 'number';
-=======
+  font-family: 'number';
+}
+
 .bg-image {
-  background-image: url("../assets/images/online-shopping.jpg");
->>>>>>> 83ab285e50892ad05ddcf6eb0d72f3e16529740d
+  background-image: url('../assets/images/online-shopping.jpg');
 }
