@@ -3,7 +3,7 @@ import ColorSelector from "@/components/singleProduct/selectColor";
 import { singleProductLoclization } from "@/constants/localization/Localization";
 import { API_KEY, BASE_URL } from "@/services/Api";
 
-async function getData(id: number) {
+async function getData(id: number | string) {
   const response = await fetch(`${BASE_URL}/api/records/products/${id}`, {
     headers: { api_key: API_KEY },
   });
@@ -15,7 +15,7 @@ async function getData(id: number) {
 export default async function SingleProduct({
   params,
 }: {
-  params: Promise<{ id: number }>;
+  params: Promise<{ id: number | string }>;
 }) {
   const { id } = await params;
   const product = await getData(id);

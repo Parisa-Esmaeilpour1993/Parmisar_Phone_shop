@@ -1,8 +1,17 @@
+"use client";
+
 import { productCategoryLocalization } from "@/constants/localization/Localization";
 import { brands } from "@/utils/brands";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ProductCategories() {
+  const router = useRouter();
+
+  const handleBrandClick = (brand: string) => {
+    router.push(`/products?brand=${brand.toLowerCase()}`);
+  };
+
   return (
     <section className="flex gap-4 items-center px-4 mb-8 mx-12 border-[1px] border-gray-400 rounded-2xl shadow-xl">
       <h2 className="text-xl font-bold text-gray-800 text-center relative animate-bounce">
@@ -14,6 +23,7 @@ export default function ProductCategories() {
         {brands.map((brand) => (
           <button
             key={brand.name}
+            onClick={() => handleBrandClick(brand.slug)}
             className="relative flex flex-col items-center justify-center rounded-lg hover:scale-105 active:scale-95 hover:-translate-y-1"
           >
             <div className="w-16 h-16">

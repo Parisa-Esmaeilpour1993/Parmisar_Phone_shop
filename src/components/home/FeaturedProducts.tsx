@@ -46,7 +46,7 @@ export default function FeaturedProducts() {
               </p>
               <div className="flex justify-center">
                 <Link
-                  href={`/product/${product.id}`}
+                  href={`/singleProduct/${product.id}`}
                   className="p-2 text-sm text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-all transform hover:scale-105 active:scale-95"
                 >
                   {featuredProductsLocalization.showProduct}

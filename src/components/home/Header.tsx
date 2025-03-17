@@ -50,7 +50,7 @@ export default function Header() {
   }, [searchQuery, products]);
 
   const handleProductClick = (id: string) => {
-    router.push(`/product/${id}`);
+    router.push(`/singleProduct/${id}`);
     setSearchQuery("");
     setFilteredProducts([]);
   };
