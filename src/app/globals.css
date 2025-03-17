@@ -1,2 +1,32 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+@font-face {
+  font-family: vazir;
+  src: url(./../../public/fonts/Vazir.woff2);
+}
+
+@font-face {
+  font-family: vazir-thin;
+  src: url(./../../public/fonts/Vazir-Thin.woff2);
+}
+
+@font-face {
+  font-family: number;
+  src: url(./../../public/fonts/Dirooz-FD.woff2);
+}
+
+.vazir {
+  font-family: 'vazir';
+}
+
+.vazir-thin {
+  font-family: 'vazir-thin';
+}
+
+.number {
+  font-family: 'number';
+}
+
+.bg-image {
+  background-image: url("../assets/images/online-shopping.jpg");
+}
