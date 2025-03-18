@@ -1,3 +1,4 @@
+"use client";
 import {
   contactUsLocalization,
   headerLocalization,
@@ -5,6 +6,7 @@ import {
 
 import brand from "@/assets/images/logo.png";
 import Image from "next/image";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function ContactUs() {
   return (
@@ -63,6 +65,7 @@ export default function ContactUs() {
         </div>
 
         <div className="flex-1 px-6 mt-10 md:mt-2">
+          <ToastContainer />
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4">
               {contactUsLocalization.stayInCall}
@@ -88,7 +91,7 @@ export default function ContactUs() {
                 placeholder={contactUsLocalization.email}
                 className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-4 gap-2">
                 <select className="w-1/5 p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                   <option value="+62">+98</option>
                 </select>
@@ -106,6 +109,11 @@ export default function ContactUs() {
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700"
+                onClick={() => {
+                  toast.success(contactUsLocalization.successMessage, {
+                    autoClose: 5000,
+                  });
+                }}
               >
                 {contactUsLocalization.send}
               </button>

@@ -155,6 +155,7 @@ export const contactUsLocalization = {
   privacy: " با تماس با ما، شما با شرایط استفاده و ",
   privacyLink: " سیاست حفظ حریم خصوصی ",
   privacy2: " ما موافقت می‌کنید. ",
+  successMessage: "اطلاعات با موفقیت ارسال شد.",
 };
 
 export const aboutUsLocalization = {
@@ -168,4 +169,29 @@ export const aboutUsLocalization = {
   progress: " پیشرفت  ",
   empathy: " همدلی  ",
   ourTeam: " تیم ما ",
+};
+
+export const loginLocalization = {
+  Login: " ورود",
+  DontHaveAccount: "آیا قبلا حساب کاربری نداشتید؟",
+  SignupHere: " ثبت نام کنید ",
+  Email: " ایمیل ",
+  Password: " رمز ورود ",
+  RememberMe: " مرا بخاطر بسپار ",
+  ForgotPassword: " فراموشی رمز عبور ",
+  EnterEmail: " ایمیل خود را وارد کنید ",
+  EnterPassword: " رمز خود را وارد کنید ",
+};
+export const signUpLocalization = {
+  Password: " رمز ورود ",
+  EnterPassword: " رمز خود را وارد کنید  ",
+  signUpDescription:
+    " با ثبت نام، با دریافت به روز رسانی ها و پیشنهادات ویژه موافقت می کنید. ",
+  Signup: " ثبت نام ",
+  AlreadyHaveAccount: " آیا قبلا حساب کاربری داشتید؟ ",
+  Login: "ورود",
+  Name: " نام ",
+  EnterName: " نام خود را وارد کنید ",
+  Email: " ایمیل ",
+  EnterEmail: " ایمیل خود را وارد کنید  ",
 };

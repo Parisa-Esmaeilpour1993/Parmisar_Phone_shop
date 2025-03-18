@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import { ProductsProps } from "@/interfaces/interfaces";
 import { useRouter } from "next/navigation";
 import { API_KEY, BASE_URL } from "@/services/Api";
+import Link from "next/link";
 
 export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -101,7 +102,9 @@ export default function Header() {
         )}
 
         <div className="border-[1px] rounded-xl border-gray-500 p-2 w-10 h-10 flex items-center justify-center active:scale-95 hover:border-gray-700 hover:border-[2px]">
-          <FaRegUser className="size-5" />
+          <Link href="/login">
+            <FaRegUser className="size-5" />
+          </Link>
         </div>
       </div>
     </header>

@@ -64,7 +64,7 @@ export default function FirstPurchaseOffer() {
           </span>
         </div>
 
-        <Link href="/register">
+        <Link href="/login">
           <button className="bg-yellow-400 text-gray-900 px-6 py-2 mx-32 rounded-lg font-bold shadow-md hover:bg-yellow-500 transition-all transform hover:scale-105">
             {offerLocalization.receiveOffer}
           </button>

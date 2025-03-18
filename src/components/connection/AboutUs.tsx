@@ -1,4 +1,8 @@
-import { aboutUsLocalization } from "@/constants/localization/Localization";
+import {
+  aboutUsLocalization,
+  footerLocalization,
+  headerLocalization,
+} from "@/constants/localization/Localization";
 import Image from "next/image";
 import { FaRegSmile } from "react-icons/fa";
 import { LuStar } from "react-icons/lu";
@@ -13,8 +17,8 @@ import team3 from "../../assets/images/team3.png";
 
 const AboutUs = () => {
   return (
-    <div className="font-sans">
-      <header className="relative bg-white h-[50vh] w-full ">
+    <div className="font-sans overflow-x-hidden">
+      <header className="relative bg-white h-[50vh] w-full">
         <div className="absolute inset-0">
           <svg
             className="w-full h-auto"
@@ -132,7 +136,10 @@ const AboutUs = () => {
       </main>
 
       <footer className="bg-gray-800 text-gray-300 py-4 px-4 text-center">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>
+          &copy; 2025 {headerLocalization.parmisar}.{" "}
+          {footerLocalization.copyRight}.
+        </p>
       </footer>
     </div>
   );
