@@ -13,11 +13,11 @@ import team3 from "../../assets/images/team3.png";
 
 const AboutUs = () => {
   return (
-    <div className="font-sans">
-      <header className="relative bg-white h-[50vh] w-full ">
+    <div className="font-sans bg-indigo-100">
+      <header className="relative  h-[50vh] w-full ">
         <div className="absolute inset-0">
           <svg
-            className="w-full h-auto"
+            className="w-full h-auto "
             id="visual"
             viewBox="0 0 900 600"
             width="900"
@@ -28,7 +28,7 @@ const AboutUs = () => {
           >
             <path
               d="M0 332L50 340.3C100 348.7 200 365.3 300 329.7C400 294 500 206 600 186.3C700 166.7 800 215.3 850 239.7L900 264L900 0L850 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0L0 0Z"
-              fill="#181b1f"
+              fill="#1e3a8a"
               strokeLinecap="round"
               strokeLinejoin="miter"
             ></path>
@@ -81,7 +81,7 @@ const AboutUs = () => {
           {aboutUsLocalization.ourValue}
         </h2>
 
-        <section className="grid grid-cols-1 p-20  bg-gray-100 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 mb-12">
+        <section className="grid grid-cols-1 p-20  bg-indigo-100 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 mb-12">
           <div className="bg-white shadow-md rounded-lg p-4 text-center">
             <div className="flex justify-center mb-4">
               <LuStar />
@@ -133,7 +133,7 @@ const AboutUs = () => {
         </section>
       </main>
 
-      <footer className="bg-gray-800 text-gray-300 py-4 px-4 text-center">
+      <footer className="bg-[#1e3a8a] text-gray-300 py-4 px-4 text-center">
         <p>&copy; 2025 Company Name. All rights reserved.</p>
       </footer>
     </div>

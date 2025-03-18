@@ -5,8 +5,8 @@ import {
 
 export default function ContactUs() {
   return (
-    <div className="bg-blue-50 min-h-screen flex flex-col items-center">
-      <header className="w-full flex justify-between items-center p-4 bg-blue-50">
+    <div className="bg-indigo-100 min-h-screen flex flex-col items-center">
+      <header className="w-full flex justify-between items-center p-4 bg-indigo-100">
         <div className="text-2xl font-bold">{headerLocalization.parmisar}</div>
       </header>
 
@@ -22,7 +22,7 @@ export default function ContactUs() {
           <p className="text-gray-700 mb-6">
             {contactUsLocalization.phoneNumber}
           </p>
-          <a href="#" className="text-blue-600 underline">
+          <a href="#" className="text-indigo-900 underline">
             {contactUsLocalization.customerSupport}
           </a>
 
@@ -49,7 +49,7 @@ export default function ContactUs() {
               </h2>
               <p className="text-gray-700">
                 {contactUsLocalization.questionLink}
-                <a href="#" className="text-blue-600 underline">
+                <a href="#" className="text-indigo-900 underline">
                   questions@parmisar.ir
                 </a>
               </p>
@@ -100,13 +100,13 @@ export default function ContactUs() {
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700"
+                className="w-full bg-indigo-900 text-white p-3 rounded-lg hover:bg-blue-500"
               >
                 {contactUsLocalization.send}
               </button>
               <p className="text-gray-600 text-xs mt-4">
                 {contactUsLocalization.privacy}
-                <a href="#" className="text-blue-600 underline">
+                <a href="#" className="text-indigo-900 underline">
                   {contactUsLocalization.privacyLink}
                 </a>{" "}
                 {contactUsLocalization.privacy2}
