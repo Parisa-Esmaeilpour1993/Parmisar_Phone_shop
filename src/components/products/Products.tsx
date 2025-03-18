@@ -8,6 +8,7 @@ import { TbCircleLetterNFilled } from "react-icons/tb";
 import { MdDoneAll } from "react-icons/md";
 import GetProducts from "./../../services/GetProducts";
 import { productslocalization } from "@/constants/localization/Localization";
+import RouterBack from "../singleProduct/router";
 
 export default function Products() {
   const router = useRouter();
@@ -22,6 +23,7 @@ export default function Products() {
       <h1 className="font-bold mb-5 text-2xl">
         {productslocalization["products"]}
       </h1>
+      <RouterBack />
       <div className="flex justify-center flex-row items-center gap-16 font-semibold ">
         <button
           onClick={() => setFilter("all")}

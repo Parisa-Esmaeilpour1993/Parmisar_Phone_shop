@@ -6,6 +6,7 @@ import Image from "next/image";
 import loginPage from "../../assets/images/Mobile-login.png";
 import { signUpLocalization } from "@/constants/localization/Localization";
 import { useRouter } from "next/navigation";
+import RouterBack from "../singleProduct/router";
 
 const SignUp = () => {
   const router = useRouter();
@@ -32,23 +33,21 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-        `${BASE_URL}/signup`,
+        `${BASE_URL}/api/users/register`,
         { ...formData },
         {
           headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${API_KEY}`,
+            api_key: API_KEY,
+            Authorization: `Bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDJlM2FiNzFiNTU0NTgwNmVkMWJlYyIsImlhdCI6MTc0MTg3NDEyNCwiZXhwIjoxNzQyMDQ2OTI0fQ.m8NyyLyGVYYni15jiCOuC86EAdIoZ03dlAvdqXC8hQk}`,
           },
         }
       );
 
       console.log("Signup successful:", response.data);
-      router.push("/login"); //یه مدل دیگه از navigate
+      router.push("/login");
     } catch (err: any) {
       console.error("Signup error:", err);
-      setError(
-        err.response?.data?.message || "An error occurred. Please try again."
-      );
+      setError(err.response?.data?.message || "خطا، دوباره امتحان کنید.");
     } finally {
       setIsSubmitting(false);
     }
@@ -56,6 +55,7 @@ const SignUp = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-indigo-100">
+      <RouterBack />
       <div className="bg-indigo-300 p-8 rounded-2xl shadow-md w-full max-w-md md:max-w-2xl flex flex-col md:flex-row">
         <div className="flex-1">
           <h1 className="text-2xl font-bold text-gray-800 mb-4">
@@ -138,7 +138,7 @@ const SignUp = () => {
               className="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Submitting..." : "Submit"}
+              {isSubmitting ? "در حال تایید..." : "تایید"}
             </button>
           </form>
         </div>

@@ -7,10 +7,12 @@ import {
 import brand from "@/assets/images/logo.png";
 import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
+import RouterBack from "../singleProduct/router";
 
 export default function ContactUs() {
   return (
     <div className="bg-blue-50 min-h-screen flex flex-col items-center pb-6">
+      <RouterBack />
       <main className="flex flex-col md:flex-row w-full gap-26 max-w-6xl mt-10">
         <div className="flex-1 px-2">
           <header className="flex gap-4 items-center pb-10 bg-blue-50 ">

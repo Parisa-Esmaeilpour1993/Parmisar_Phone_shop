@@ -20,11 +20,12 @@ export default async function SingleProduct({
   const { id } = await params;
   const product = await getData(id);
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 number vazir">
       <section className="w-full text-center flex justify-center items-center bg-gray-100 p-10">
         <img
-          src="https://i.pinimg.com/1200x/d1/74/30/d17430273d5dae339259ab40d02c0cfe.jpg"
+          src={`${BASE_URL}${product.productImage}`}
           alt={product.productName}
+          className="max-h-[500px]"
         />
       </section>
       <section className="px-10 py-8 w-full flex flex-col justify-between gap-5 relative">

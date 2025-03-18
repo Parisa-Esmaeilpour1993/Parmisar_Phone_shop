@@ -14,10 +14,12 @@ import monitor from "../../assets/images/monitor.jpg";
 import team1 from "../../assets/images/team1.png";
 import team2 from "../../assets/images/team2.png";
 import team3 from "../../assets/images/team3.png";
+import RouterBack from "../singleProduct/router";
 
 const AboutUs = () => {
   return (
-    <div className="font-sans overflow-x-hidden">
+    <div className="font-sans overflow-x-hidden relative">
+      <RouterBack className="text-white z-50" />
       <header className="relative bg-white h-[50vh] w-full">
         <div className="absolute inset-0">
           <svg

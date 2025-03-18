@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import axios from "axios";
-import { BASE_URL, API_KEY } from "../../services/Api";
-import loginPage from "../../assets/images/Mobile-login.png";
-import Image from "next/image";
 import { loginLocalization } from "@/constants/localization/Localization";
+import axios from "axios";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import loginPage from "../../assets/images/Mobile-login.png";
+import { API_KEY, BASE_URL } from "../../services/Api";
+import RouterBack from "../singleProduct/router";
 
 const Login = () => {
   const router = useRouter();
@@ -17,33 +18,34 @@ const Login = () => {
     e.preventDefault();
 
     if (!email || !password) {
-      setError("Please fill in all fields.");
+      setError("همه فیلدها باید پر باشند.");
       return;
     }
 
     try {
       const response = await axios.post(
-        `${BASE_URL}/login`,
-        {
-          email,
-          password,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${API_KEY}`,
-          },
-        }
+        `${BASE_URL}/api/users/login`,
+        { email, password },
+        { headers: { api_key: API_KEY } }
       );
 
+      const { token, user } = response.data;
+
+      localStorage.setItem("authToken", token);
+      localStorage.setItem("user", JSON.stringify(user));
+
       console.log("Login successful:", response.data);
+
+      router.push("/");
     } catch (error) {
-      setError("Invalid credentials or server error.");
+      setError("ورود موفقیت آمیز نبود.");
       console.error("Login error:", error);
     }
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-indigo-100">
+      <RouterBack />
       <div className="bg-indigo-300 p-8 rounded-2xl shadow-md w-full max-w-md md:max-w-2xl flex flex-col md:flex-row">
         <div className="flex-1">
           <h1 className="text-2xl font-bold text-gray-800 mb-4">

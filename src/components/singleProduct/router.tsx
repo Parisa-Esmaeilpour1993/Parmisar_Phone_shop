@@ -2,13 +2,16 @@
 
 import { IoArrowBackOutline } from "react-icons/io5";
 
-export default function RouterBack() {
+interface IRouter {
+  className?: string;
+}
+export default function RouterBack({ className }: IRouter) {
   return (
     <div
-      className="absolute top-0 left-0 p-5 cursor-pointer "
+      className={`absolute top-0 left-0 p-5 cursor-pointer ${className}`}
       onClick={() => window.history.back()}
     >
-      <IoArrowBackOutline className="text-[20px]" />
+      <IoArrowBackOutline className={`text-[20px] ${className}`} />
     </div>
   );
 }
