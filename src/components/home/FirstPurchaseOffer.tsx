@@ -57,7 +57,7 @@ export default function FirstPurchaseOffer() {
         <p className="text-lg mb-4">{offerLocalization.description}</p>
 
         <div className="flex justify-center w-1/3 gap-4 text-xl font-bold bg-white text-gray-800 px-4 py-2 rounded-lg shadow-md mb-4">
-          <span>
+          <span className="number">
             {String(timeLeft.seconds).padStart(2, "0")} :{" "}
             {String(timeLeft.minutes).padStart(2, "0")} :{" "}
             {String(timeLeft.hours).padStart(2, "0")}

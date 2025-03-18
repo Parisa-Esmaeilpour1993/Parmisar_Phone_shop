@@ -19,7 +19,7 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setIsNewsOpen(false);
-    }, 1000);
+    }, 300);
   };
 
   return (

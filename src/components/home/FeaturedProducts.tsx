@@ -41,7 +41,7 @@ export default function FeaturedProducts() {
               <p className="text-gray-600  text-sm text-center mb-2">
                 {product.description}
               </p>
-              <p className="text-blue-600 font-semibold text-center mb-4">
+              <p className="text-blue-600 font-semibold text-center mb-4 number">
                 {product.price}
               </p>
               <div className="flex justify-center">

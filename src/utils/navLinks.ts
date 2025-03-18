@@ -7,6 +7,6 @@ export const navLinks = [
     path: "https://mobo.news/blog/tricks/",
   },
   { title: navLinksLocalization.news, path: "/news" },
-  { title: navLinksLocalization.contactUs, path: "/contact" },
-  { title: navLinksLocalization.aboutUs, path: "/about" },
+  { title: navLinksLocalization.contactUs, path: "/contactUs" },
+  { title: navLinksLocalization.aboutUs, path: "/aboutUs" },
 ];

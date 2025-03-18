@@ -47,12 +47,12 @@ export default function Footer() {
           <h4 className="text-lg font-bold mb-4">{footerLocalization.links}</h4>
           <ul className="text-sm">
             <li>
-              <a href="/about" className="hover:text-blue-600">
+              <a href="/aboutUs" className="hover:text-blue-600">
                 {footerLocalization.aboutUs}
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-blue-600">
+              <a href="/contactUs" className="hover:text-blue-600">
                 {footerLocalization.contactUs}
               </a>
             </li>

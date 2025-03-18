@@ -20,7 +20,7 @@ export const products = [
     description: featuredProductsLocalization.description2,
   },
   {
-    id: "1668771212892362",
+    id: "987675656376087",
     name: "Xiaomi 14 Ultra",
     price: `39,900,000 ${featuredProductsLocalization.currency}`,
     image: xiaomi14ultra,

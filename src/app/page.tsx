@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
-    <div>
+    <div className="vazir">
       <Header />
       <FirstPurchaseOffer />
       <Hero />
