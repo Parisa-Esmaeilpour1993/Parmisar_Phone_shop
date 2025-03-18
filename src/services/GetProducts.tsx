@@ -1,21 +1,20 @@
-'use client';
+"use client";
 
-import { useSearchParams, useRouter } from 'next/navigation';
-import Loading from '@/components/Loading/Loading';
-import { API_KEY, BASE_URL } from './Api';
+import { useSearchParams, useRouter } from "next/navigation";
+import Loading from "@/components/Loading/Loading";
+import { API_KEY, BASE_URL } from "./Api";
 import ProductCard, {
   IProductCard,
 } from "@/components/products/productCard/productCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 const GetProducts = () => {
   const [products, setProducts] = useState<IProductCard[]>([]);
   const [loading, setLoading] = useState(true);
 
   const searchParams = useSearchParams();
-  const filter = searchParams.get('brand') || 'all'; // مقدار پارامتر از URL
+  const filter = searchParams.get("brand") || "all"; // مقدار پارامتر از URL
   const filteredProducts =
     filter === "all"
       ? products
@@ -57,7 +56,7 @@ const GetProducts = () => {
           <ProductCard key={item.id} data={item} />
         ))
       ) : (
-        <p>محصولی یافت نشد</p>
+        <p className="absolute text-center">محصولی یافت نشد</p>
       )}
     </div>
   );
